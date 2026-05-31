@@ -1,0 +1,4 @@
+1. wspólnym zasobem jest zmienna "liczba" na której wykonywane są obliczenia. Z tej samej zmiennej korzysta kilka wątków
+2. Sekcją krytyczną jest metoda zmieniająca "liczba" w kilku krokach. Najpierw odejmuje 10, następnie mnoży przez 2, później dzieli przez 2 i na końcu dodaje 10. Teoretycznie końcowy wynik powinien pozostać bez zmian. Dzięki temu widać moment przeplotu operacji kilku wątków.
+3. Błąd pojawia się w wersji bez synchronizacji, kiedy wątki przeplatają swoje operacje. Jeden wątek może mieć dostęp do zmiennej, zanim drugi skończy całą sekwencję zmian.
+4. Synchronized sprawia ze z metody zmieniającej wartość zmiennej "liczba" może korzystać jeden wątek jednocześnie.
