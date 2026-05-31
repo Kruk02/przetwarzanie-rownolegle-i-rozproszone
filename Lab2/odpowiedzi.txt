@@ -1,0 +1,11 @@
+1.
+Przy run() kazdy pracownik skończyl najpierw cala swoja prace i dopiero kolejny pracownik mogl rozpoczac
+Przy start() wszyscy pracownicy robili w losowej kolejnosci na raz (przy kazdym odpaleniu byla inna kolejnosc)
+2.join() 
+powoduje, ze aktualiny watek czeka na zakończenie wskazanego watku
+3. Thread a ExecutorService
+Thread tworzymy i uruchamiamy recznie dla konkretnego zadania.
+ExecutorService zarzadza pula watkow i wykonuje przekazane zadania.
+4.
+Executors.newFixedThreadPool(3) wpisuje na sztywno ile maksymalnie watkow na raz ma być wykonywane, czyli jak wpisze 3 a sa 4 zadania to zadanie numer 4 będzie musiało poczekać az ktores z 1-3 skończy.
+Executors.newCachedThreadPool() dynamicznie dobiera liczbne watkow. uzylbym go jakby było dużo krótkich zadan
